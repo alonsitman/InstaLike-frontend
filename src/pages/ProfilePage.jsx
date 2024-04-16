@@ -24,7 +24,7 @@ export function ProfilePage() {
     const [isLoadingPosts, setIsLoadingPosts] = useState(true)
     const isLoadingUsers = useSelector(storeState => storeState.systemModule.isLoading)
     
-    const [filterBy, setFilterBy] = useState(postService.getDefualtFilterBy)
+    const [filterBy, setFilterBy] = useState(postService.getDefaultFilterBy)
 
     console.log('imgimgimgimg',loggedInUser.imgUrl)
     const { userId } = useParams()

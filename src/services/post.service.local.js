@@ -16,7 +16,7 @@ export const postService = {
     getEmptyPost,
     getEmptyComment,
     getRandomImage,
-    getDefualtFilterBy,
+    getDefaultFilterBy,
     addPostMsg
 }
 window.cs = postService
@@ -62,7 +62,7 @@ async function save(post) {
     return savedPost
 }
 
-function getDefualtFilterBy() {
+function getDefaultFilterBy() {
     return { _id: '', saved: '', loggedInUser_id: '', savedBy_id: '' }
 }
 

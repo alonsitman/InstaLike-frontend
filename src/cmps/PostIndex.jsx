@@ -12,7 +12,7 @@ import { OptionsModal } from "./OptionsModal"
 export function PostIndex() {
     const posts = useSelector(storeState => storeState.postModule.posts)
     const isLoading = useSelector(storeState => storeState.systemModule.isLoading)
-    const [filterBy, setFilterBy] = useState(postService.getDefualtFilterBy)
+    const [filterBy, setFilterBy] = useState(postService.getDefaultFilterBy)
     const loggedInUser = useSelector(storeState => storeState.userModule.user)
     const [isOptionsModalOpen, setIsOptionsModalOpen] = useState(false)
     
@@ -49,7 +49,9 @@ export function PostIndex() {
     }
 
     console.log('posts in PostIndex',posts)
-
+    if (posts.length === 0) {
+        console.log('Posts array is empty')
+    }
     if (isLoading) return <div>Loading</div>
     return (
         <div className="post-index">
