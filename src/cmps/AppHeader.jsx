@@ -11,14 +11,17 @@ import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Store } from '@mui/icons-material'
 
-
-export function AppHeader() {
+    
+export function AppHeader({handleOpenCreatePost}) {
     const locationPathname = useLocation().pathname
     const loggedInUser = useSelector(storeState => storeState.userModule.user)
 
     return (
         <header className="app-header full">
             <nav>
+                <NavLink className='logo' to="/" exact="true">
+                    <h1>Instalike</h1>
+                </NavLink>
                 <NavLink to="/" exact="true">
                     <h1>
                         <img className='logo'  src="/public/icons/instagramBig.svg" alt="Instagram Big Icon" />
@@ -54,6 +57,8 @@ export function AppHeader() {
                     <img className='icon' src="/public/icons/Like.svg" alt="Nofication Icon" />
                     <div>Notification</div>
                 </div>
+                <div onClick={handleOpenCreatePost}>
+                    <img className='icon' src="../../public/icons/Create.svg" alt="Create Icon" />
                 <div>
                     <img className='icon' src="/public/icons/Create.svg" alt="Create Icon" />
                     <div>Create</div>

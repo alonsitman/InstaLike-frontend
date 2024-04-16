@@ -1,0 +1,60 @@
+.ReactModal__Content {
+    width: fit-content;
+    height: fit-content;
+}
+
+.ReactModal__Overlay {
+  // color:red;
+}
+
+.create-modal-container {
+    width: fit-content;
+    height: fit-content;
+    
+    background-color: white;
+  }
+  
+  .upload-image-container {
+    height: 692px;
+    width: 692px;
+
+    // background-color: red;
+        // .dropzone {
+        //     width: 100%;
+        //     height: 100%;
+
+        //     padding: 24px;
+            // background-color: pink;
+            // if debugging consider changing dropzone to upload-preview
+              .image-dropzone{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                // background-color: orange;
+                padding: 24px;
+                width: 100%;
+                height: 100%;
+              }
+
+              .upload-preview input[type="file"] {
+                opacity: 0; /* Hide the default input element */
+                background-color: purple;
+              }
+
+              p {
+                font-size: $system-22-font-size;
+              }
+
+              .upload-image-btn {
+                background: $clr12;
+                color: white;
+                font-size: rem($system-14-font-size);
+                font-weight: $font-weight-system-bold;
+
+                border-radius: 10px;
+                padding: 10px 20px;
+              }
+        }
+  

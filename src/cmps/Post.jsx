@@ -5,7 +5,6 @@ import { PostPhotos } from "./PostPhotos"
 import { PostActions } from "./PostActions"
 import { PostComments } from "./PostComments"
 import { PostLikes } from "./PostLikes"
-// import { RandomImage } from "./RandomImage"
 
 export function Post({ post, onUpdatePost, loggedInUser, setIsOptionsModalOpen}) {
 
